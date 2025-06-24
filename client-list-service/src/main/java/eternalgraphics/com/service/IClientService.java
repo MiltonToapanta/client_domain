@@ -2,6 +2,9 @@ package eternalgraphics.com.service;
 
 import eternalgraphics.com.model.Client;
 
+import java.util.List;
+
 public interface IClientService {
-    Client save(Client client); 
+    List<Client> findAll();
+    Client findById(Integer idClient);
 }

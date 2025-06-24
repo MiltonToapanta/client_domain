@@ -2,6 +2,7 @@ package eternalgraphics.com.service;
 
 import eternalgraphics.com.model.Client;
 
+
 public interface IClientService {
-    Client save(Client client); 
+    Client updateClient(Client client);
 }
