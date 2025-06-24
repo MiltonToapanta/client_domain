@@ -51,6 +51,6 @@ jobs:
                        -e DATABASE=${{secrets.DATABASE}} \
                        -e DATASOURCE_USERNAME=${{secrets.DATASOURCE_USERNAME}} \
                        -e DATASOURCE_PASSWORD=${{secrets.DATASOURCE_PASSWORD}} \
-                       -e BROKER_URL=${{secrets.BROKER_URL}} \
+                       -e PORT=${{secrets.PORT}} \
                        -d --name ${{secrets.DOCKER_IMAGE_ADD}} \
-                       -p 1028:1028 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_ADD}}:latest
+                       -p ${{secrets.PORT}}:${{secrets.PORT}} ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_ADD}}:latest
