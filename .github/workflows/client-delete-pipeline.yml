@@ -3,13 +3,13 @@ name: Pipeline for Client Delete Microservice
 on:
   push:
     branches:
-      - test
+      - QA
     paths:
       - 'client-delete-service/**'
       - '.github/workflows/client-delete-pipeline.yml'
   pull_request:
     branches: 
-      - test
+      - QA
     paths:
       - 'client-delete-service/**'
       - '.github/workflows/client-delete-pipeline.yml'
@@ -51,5 +51,6 @@ jobs:
                        -e DATABASE=${{secrets.DATABASE}} \
                        -e DATASOURCE_USERNAME=${{secrets.DATASOURCE_USERNAME}} \
                        -e DATASOURCE_PASSWORD=${{secrets.DATASOURCE_PASSWORD}} \
+                       -e PORT_DELETE=${{secrets.PORT_DELETE}} \
                        -d --name ${{secrets.DOCKER_IMAGE_DELETE}} \
-                       -p 1029:1029 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_DELETE}}:latest
+                       -p ${{secrets.PORT_DELETE}}:${{secrets.PORT_DELETE}} ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_DELETE}}:latest
