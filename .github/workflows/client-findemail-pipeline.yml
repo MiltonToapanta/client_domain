@@ -28,7 +28,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_FIND_BY_EMAIL}}:latest ./client-findbyemail-service  
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_FIND_BY_EMAIL}}:latest ./client-findbyemail-service
 
       - name: Push Docker image to Dockerhub
         run: docker push ${{ secrets.DOCKER_USERNAME }}/${{secrets.DOCKER_IMAGE_FIND_BY_EMAIL}}:latest
