@@ -20,7 +20,7 @@ public class ClientController {
 
     @GetMapping
     public ResponseEntity<String> checkService(){
-        return new ResponseEntity<>("List Client microservice is running...", HttpStatus.OK);
+        return new ResponseEntity<>("List Client microservice is running....", HttpStatus.OK);
     }
 
     @GetMapping("/client")
