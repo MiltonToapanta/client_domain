@@ -1,6 +1,6 @@
 package milton.com.repo;
 
-import eternalgraphics.com.model.Client;
+import milton.com.model.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,6 +1,6 @@
 package milton.com.service.impl;
 
-import eternalgraphics.com.model.Client;
+import milton.com.model.Client;
 import milton.com.repo.IClientRepo;
 import milton.com.service.IClientService;
 import org.springframework.beans.factory.annotation.Autowired;
