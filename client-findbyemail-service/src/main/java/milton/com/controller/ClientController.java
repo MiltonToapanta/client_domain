@@ -11,15 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/clients")
+@RequestMapping("/")
 public class ClientController {
 
     @Autowired
     private IClientService clientService;
 
-    @GetMapping("/health")
+    @GetMapping("/")
     public ResponseEntity<String> checkService() {
-        return new ResponseEntity<>("Client microservice is running...", HttpStatus.OK);
+        return new ResponseEntity<>("Client Find By Email microservice is running...", HttpStatus.OK);
     }
 
     // Buscar cliente por email
