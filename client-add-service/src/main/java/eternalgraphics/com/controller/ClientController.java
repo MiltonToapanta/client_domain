@@ -13,7 +13,7 @@ import eternalgraphics.com.model.Client;
 import eternalgraphics.com.service.IClientService;
 
 @Controller
-@RequestMapping("/clients")  
+@RequestMapping("/")  
 public class ClientController {
 
     @Autowired
@@ -21,7 +21,7 @@ public class ClientController {
 
     @GetMapping("/")
     public ResponseEntity<String> healthCheck() {
-        return new ResponseEntity<>("Client microservice is running...", HttpStatus.OK);
+        return new ResponseEntity<>("Client add microservice is running...", HttpStatus.OK);
     }
 
     @PostMapping("/add")  
