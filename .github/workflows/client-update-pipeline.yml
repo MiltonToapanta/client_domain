@@ -3,13 +3,13 @@ name: Pipeline for Client Update Microservice
 on:
   push:
     branches:
-      - test
+      - QA
     paths:
       - 'client-update-service/**'
       - '.github/workflows/client-update-pipeline.yml'
   pull_request:
     branches: 
-      - test
+      - QA
     paths:
       - 'client-update-service/**'
       - '.github/workflows/client-update-pipeline.yml'
@@ -51,5 +51,6 @@ jobs:
                        -e DATABASE=${{secrets.DATABASE}} \
                        -e DATASOURCE_USERNAME=${{secrets.DATASOURCE_USERNAME}} \
                        -e DATASOURCE_PASSWORD=${{secrets.DATASOURCE_PASSWORD}} \
+                       -e PORT_UPDATE=${{secrets.PORT_UPDATE}} \
                        -d --name ${{secrets.DOCKER_IMAGE_UPDATE}} \
-                       -p 1032:1032 ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_UPDATE}}:latest
+                       -p ${{secrets.PORT_UPDATE}}:${{secrets.PORT_UPDATE}} ${{secrets.DOCKER_USERNAME}}/${{secrets.DOCKER_IMAGE_UPDATE}}:latest
