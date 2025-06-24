@@ -3,13 +3,13 @@ name: Pipeline for Client List Microservice
 on:
   push:
     branches:
-      - test
+      - QA
     paths:
       - 'client-list-service/**'
       - '.github/workflows/client-list-pipeline.yml'
   pull_request:
     branches: 
-      - test
+      - QA
     paths:
       - 'client-list-service/**'
       - '.github/workflows/client-list-pipeline.yml'
