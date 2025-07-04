@@ -3,13 +3,13 @@ name: Pipeline for Client Add Microservice
 on:
   push:
     branches:
-      - QA
+      - Production
     paths:
       - 'client-add-service/**'
       - '.github/workflows/client-add-pipeline.yml'
   pull_request:
     branches: 
-      - QA
+      - Production
     paths:
       - 'client-add-service/**'
       - '.github/workflows/client-add-pipeline.yml'

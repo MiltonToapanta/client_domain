@@ -3,13 +3,13 @@ name: Pipeline for Client Update Microservice
 on:
   push:
     branches:
-      - QA
+      - Production
     paths:
       - 'client-update-service/**'
       - '.github/workflows/client-update-pipeline.yml'
   pull_request:
     branches: 
-      - QA
+      - Production
     paths:
       - 'client-update-service/**'
       - '.github/workflows/client-update-pipeline.yml'
