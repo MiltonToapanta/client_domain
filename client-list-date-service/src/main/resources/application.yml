@@ -11,5 +11,4 @@ spring:
     hibernate:
       ddl-auto: update
 server:
-  port: ${PORT_LIST-DATE}
-
+  port: ${PORT_LIST_DATE}
